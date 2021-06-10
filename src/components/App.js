@@ -18,6 +18,7 @@ function App() {
       <header className="App-header">
         Header
         <Button>Contact Us</Button>
+        <Button secondary>Book</Button>
       </header>
     </>
   );
