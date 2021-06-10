@@ -1,6 +1,9 @@
 import React from 'react'
-import {Button} from './common'
+// import {Button} from './common'
 import {createGlobalStyle} from 'styled-components'
+import Header from './section/Header'
+import Main from './section/Main'
+
 
 const GlobalStyle = createGlobalStyle`
   body { 
@@ -15,11 +18,16 @@ function App() {
   return (
     <>
     <GlobalStyle />
-      <header className="App-header">
+      <Header />
+      <Main />
+      <header className="header">
         Header
-        <Button>Contact Us</Button>
-        <Button secondary>Book</Button>
+        
+        
       </header>
+      <main>
+        
+      </main>
     </>
   );
 }

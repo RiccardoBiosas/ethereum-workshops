@@ -9,6 +9,7 @@ const Button = styled.button`
     border: none;
     /* color: ${props => props.secondary ? '#067926' : '#fff'}; 
     background: ${props => props.secondary ? '#CAEAFF' : '#067926'}; */
+    text-align: center;
     font-family: 'Fira Code', monospace;
     font-size: 30px;
     font-weight: 700; 
