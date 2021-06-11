@@ -1,12 +1,14 @@
 import React from 'react'
-import {Button} from '../common'
 import styled from 'styled-components' 
 
-const HeaderSection = styled.div`
+import {Button} from '../common'
+
+const HeaderWrapper = styled.header`
     background-color: #CAEAFF;
 `
 
 const HeadingOne = styled.h1` 
+    padding: 1rem;
     font-weight: 500;
     font-size: 50px;
     text-align: center;
@@ -21,6 +23,12 @@ const Paragraph = styled.p`
     color: #39493E;
     padding: 1.5rem;
     padding-bottom: 2.5rem;
+
+    @media (min-width: 1280px) { 
+        margin-left: auto;
+        margin-right: auto;
+        width: 1078px;
+    }
 `
 const Center = styled.div`
     display: flex;
@@ -33,12 +41,12 @@ const Center = styled.div`
 
 export default function Header() { 
     return ( 
-        <HeaderSection>
+        <HeaderWrapper>
             Header
             <HeadingOne>Your Ethereum Workshop in Prague </HeadingOne>
             <Paragraph>Every week we take you on the journey to gain an understanding of Solidity & developing your first smart contract. From week 1 to week 2. </Paragraph>
             <Center><Button>Contact Us</Button></Center> 
-        </HeaderSection>
+        </HeaderWrapper>
     )
 }
 

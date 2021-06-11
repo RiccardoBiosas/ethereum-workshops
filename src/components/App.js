@@ -1,15 +1,14 @@
 import React from 'react'
-// import {Button} from './common'
 import {createGlobalStyle} from 'styled-components'
 import Header from './section/Header'
 import Main from './section/Main'
-
 
 const GlobalStyle = createGlobalStyle`
   body { 
     box-sizing: border-box; 
     margin: 0; 
     min-height: 100vh; 
+    text-align: center;
     font-family: 'Fira Code', monospace;
   }
 `
@@ -17,17 +16,9 @@ const GlobalStyle = createGlobalStyle`
 function App() {
   return (
     <>
-    <GlobalStyle />
+      <GlobalStyle />
       <Header />
       <Main />
-      <header className="header">
-        Header
-        
-        
-      </header>
-      <main>
-        
-      </main>
     </>
   );
 }
