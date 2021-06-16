@@ -1,14 +1,12 @@
 import React from 'react'
 import styled from 'styled-components' 
-// import {Link} from 'react-router-dom'
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom"
 import {Button} from '../common/Button'
-import Syllabus from '../common/Syllabus'
 
 const MainWrapper = styled.main` 
     box-sizing: border-box; 
-    padding: .5rem;
-    background: #067926;
+    padding: 1rem;
+    background: #265433;
     text-align: center;
     color: #CAEAFF;
 `; 
@@ -29,6 +27,8 @@ const Address = styled.a`
     font-weight: bold;
     font-size: 25px;
     line-height: 33px;
+    padding-left: 21px;
+    padding-right: 24px;
 `
 
 const Time = styled.div`
@@ -68,7 +68,6 @@ const GoogleCalendar = styled.div`
 export default function Main() { 
     return ( 
         <MainWrapper>
-            Main
             <HeadingTwo>Introduction to Solidity </HeadingTwo>
             <HeadingThree>Every Monday</HeadingThree>
             <Address>Address: Nile House, Karolinská 654/2, Praha 8</Address>
@@ -81,7 +80,6 @@ export default function Main() {
                     </Router>
                 </GoogleCalendar>
             </Book>
-            <Syllabus></Syllabus>
         </MainWrapper>
     )
 }

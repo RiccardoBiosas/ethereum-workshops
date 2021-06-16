@@ -2,6 +2,7 @@ import React from 'react'
 import {createGlobalStyle} from 'styled-components'
 import Header from './section/Header'
 import Main from './section/Main'
+import Syllabus from './section/Syllabus'
 
 const GlobalStyle = createGlobalStyle`
   body { 
@@ -19,6 +20,7 @@ function App() {
       <GlobalStyle />
       <Header />
       <Main />
+      <Syllabus />
     </>
   );
 }

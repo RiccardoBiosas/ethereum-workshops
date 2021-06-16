@@ -1,10 +1,15 @@
 import React from 'react'
 import styled from 'styled-components' 
 
+import g10 from '../images/g10.png'
+import yellowEgg from '../images/yellowEgg.png'
+import cloud from '../images/cloud.png'
 import {Button} from '../common'
 
 const HeaderWrapper = styled.header`
     background-color: #CAEAFF;
+    position: relative;
+    overflow: hidden;
 `
 
 const HeadingOne = styled.h1` 
@@ -13,6 +18,7 @@ const HeadingOne = styled.h1`
     font-size: 50px;
     text-align: center;
     color: #067926;
+    margin-top: 100px;
 `; 
 
 const Paragraph = styled.p`
@@ -35,17 +41,53 @@ const Center = styled.div`
     justify-content: center;
     align-items: center;
 `
-// const PragueImg = styled.div`
-//     background-image
-// `
+const PragueImgWrapper = styled.div`
+    position: relative; 
+    height: 517px;
+    overflow: hidden;
+`
+
+const PragueImg = styled.img`
+    position: relative; 
+    min-height: 517px;
+
+    @media (min-width:1024px) { 
+        left: -10%;
+        min-height: 517px;
+    }
+`
+
+const Egg = styled.div`
+    position: absolute; 
+    top: -20px;
+    left: -47px;
+`
+const Cloud = styled.div`
+    position: absolute; 
+    top: -15px; 
+    right: -25px;
+
+    @media (min-width: 1024px) { 
+        top: 38px; 
+        right: 73px;
+    }
+`
 
 export default function Header() { 
     return ( 
         <HeaderWrapper>
-            Header
+            <Egg>
+                <img src={yellowEgg} alt="yellow Egg" />
+            </Egg>
+            <Cloud>
+                <img src={cloud} alt="cloud" />
+            </Cloud>
             <HeadingOne>Your Ethereum Workshop in Prague </HeadingOne>
             <Paragraph>Every week we take you on the journey to gain an understanding of Solidity & developing your first smart contract. From week 1 to week 2. </Paragraph>
             <Center><Button>Contact Us</Button></Center> 
+            <PragueImgWrapper>
+                <PragueImg src={g10} alt="Prague" />
+            </PragueImgWrapper>
         </HeaderWrapper>
     )
 }
