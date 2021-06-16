@@ -73,7 +73,6 @@ const Covers = styled.p`
 
 const Column = styled.div`
     width: 100%; 
-    
 
     @media (min-width: 1028px) { 
         width:  35%;
@@ -84,12 +83,6 @@ const SubHeading = styled.p`
     font-weight: 500;
     font-size: 20px;
     line-height: 26px;
-    
-    /* @media (min-width: 1024px) { 
-        padding-left: 140px;
-        padding-right: 140px;
-    } */
-
 `
 
 const PragueImgWrapper = styled.div`
@@ -107,11 +100,47 @@ const PragueImg = styled.img`
         min-height: 517px;
     }
 `
+const GreenLine1 = styled.div`
+    position: relative; 
+    padding: 0.5rem;
+    background-color: #2BC213;
+    border-radius: 20px;
+    width: 268px;
+    margin-bottom: 8px; 
+
+    @media (min-width: 1024px) { 
+        width: 800px;
+    }
+`
+
+const GreenLine2 = styled.div`
+    position: relative; 
+    display: block;
+    padding: 0.5rem;
+    background-color: #349F32;
+    border-radius: 20px;
+    width: 300px;
+
+    @media (min-width: 1024px) { 
+        width: 976px;
+    }
+`
+const CenterLines = styled.div`
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    margin-top: 26px;
+`
 
 export default function Syllabus() { 
     return ( 
         <SyllabusSection>
             <HeadingFour>Syllabus</HeadingFour>
+            <CenterLines>
+                <GreenLine1></GreenLine1>
+                <GreenLine2></GreenLine2>
+            </CenterLines>
             <ScheduleWrapper>
                 <Column>
                     <div>
