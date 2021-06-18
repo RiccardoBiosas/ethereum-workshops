@@ -15,12 +15,14 @@ const HeadingTwo = styled.h2`
     font-weight: 400;
     font-size: 40px;
     line-height: 52px;
+    margin-bottom: 65px;
 `
 
 const HeadingThree = styled.h3`
     font-weight: bold;
     font-size: 40px;
     line-height: 52px;
+    margin-bottom: 32px;
 `
 
 const Address = styled.a`
@@ -57,11 +59,12 @@ const Book = styled.div`
 const GoogleCalendar = styled.div`
     margin-top: 2.25rem;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 39px;
 
     @media (min-width: 1280px) { 
         margin-top: 0;
+        font-size: 30px;
     }
 `
 

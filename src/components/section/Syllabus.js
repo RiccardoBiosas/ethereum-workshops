@@ -13,15 +13,13 @@ const SyllabusSection = styled.section`
 
 const HeadingFour = styled.h4`
     box-sizing: border-box;
-    margin: 0;
+    margin-top: 120px;
     font-size: 40px;
     line-height: 52px;
     font-weight: normal;
-    margin-top: 166px;
-    
 `
 const HeadingFive = styled.h5`
-    margin:0;
+    margin-bottom: 1.5rem;
     margin-top: 85px;
     font-weight: bold;
     font-size: 30px;
@@ -55,20 +53,7 @@ const Time = styled.div`
     text-decoration-thickness: 2px;
     text-underline-offset: 3px;
     margin-top: 75px;
-`
-
-const Covers = styled.p`
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 26px;
-    margin-top: 113px;
-    padding-left: 42px; 
-    padding-right: 46px;
-
-    @media (min-width: 1280px){ 
-        padding-left: 100px; 
-        padding-right: 110px;
-    }
+    margin-bottom: 1.25rem;
 `
 
 const Column = styled.div`
@@ -131,6 +116,21 @@ const CenterLines = styled.div`
     justify-content: center; 
     align-items: center;
     margin-top: 26px;
+`
+
+const Covers = styled.p`
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    margin: 0 auto;
+    margin-top: 93px;
+    padding: 0 1rem;
+
+    @media (min-width: 1280px){ 
+        width: 417px;
+        margin: 0 auto;
+        margin-top: 93px;
+    }
 `
 
 export default function Syllabus() { 

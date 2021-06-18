@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components' 
 
-import g10 from '../images/g10.png'
-import yellowEgg from '../images/yellowEgg.png'
+import prgGreen from '../images/prgGreen.png'
+import sun from '../images/sun.png'
 import cloud from '../images/cloud.png'
 import {Button} from '../common'
 
@@ -19,6 +19,7 @@ const HeadingOne = styled.h1`
     text-align: center;
     color: #067926;
     margin-top: 100px;
+    margin-bottom: 80px;
 `; 
 
 const Paragraph = styled.p`
@@ -28,12 +29,13 @@ const Paragraph = styled.p`
     text-align: center;
     color: #39493E;
     padding: 1.5rem;
-    padding-bottom: 2.5rem;
+    margin-bottom: 100px;
 
     @media (min-width: 1280px) { 
         margin-left: auto;
         margin-right: auto;
         width: 1078px;
+        padding: 0;
     }
 `
 const Center = styled.div`
@@ -77,7 +79,7 @@ export default function Header() {
     return ( 
         <HeaderWrapper>
             <Egg>
-                <img src={yellowEgg} alt="yellow Egg" />
+                <img src={sun} alt="yellow Egg" />
             </Egg>
             <Cloud>
                 <img src={cloud} alt="cloud" />
@@ -86,7 +88,7 @@ export default function Header() {
             <Paragraph>Every week we take you on the journey to gain an understanding of Solidity & developing your first smart contract. From week 1 to week 2. </Paragraph>
             <Center><Button>Contact Us</Button></Center> 
             <PragueImgWrapper>
-                <PragueImg src={g10} alt="Prague" />
+                <PragueImg src={prgGreen} alt="Prague" />
             </PragueImgWrapper>
         </HeaderWrapper>
     )
