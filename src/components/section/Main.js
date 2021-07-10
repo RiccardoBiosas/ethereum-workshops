@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components' 
-import { BrowserRouter as Router, Link } from "react-router-dom"
+import GAAnalytics from '../../utils/analytics'
+import { actions, categories } from '../../constants/analytics'
 import {Button} from '../common/Button'
 
 const MainWrapper = styled.main` 
@@ -56,11 +57,18 @@ const Book = styled.div`
         flex-direction: row;
     }
 `
-const GoogleCalendar = styled.div`
+const StyledGoogleCalendar = styled.div`
     margin-top: 2.25rem;
     font-weight: bold;
     font-size: 25px;
     line-height: 39px;
+
+    button {
+        background: transparent;
+        border: none;
+        font-size: 1.4rem;
+        color: blue;
+    }
 
     @media (min-width: 1280px) { 
         margin-top: 0;
@@ -68,20 +76,27 @@ const GoogleCalendar = styled.div`
     }
 `
 
-export default function Main() { 
-    return ( 
+/**
+ * TODO:
+ * should google calendar be a button or just plain text?
+ */
+
+export default function Main() {
+    const handleClick = () => {
+        GAAnalytics.sendGAEvent(categories.HOMEPAGE, actions.BOOK_LESSON)
+        window.open('https://www.google.co.uk', '_blank')
+    }
+    return (
         <MainWrapper>
             <HeadingTwo>Introduction to Solidity </HeadingTwo>
             <HeadingThree>Every Monday</HeadingThree>
             <Address>Address: Nile House, Karolinská 654/2, Praha 8</Address>
             <Time>5:30 - 7pm</Time>
             <Book>
-                <Button secondary>Book</Button>
-                <GoogleCalendar>&nbsp;on&nbsp; 
-                    <Router>
-                        <Link to='https://goo.gl/maps/ePS2zzLwRrphQmVF8'>Google Calendar</Link>
-                    </Router>
-                </GoogleCalendar>
+                <Button secondary onClick={handleClick}>Book</Button>
+                <StyledGoogleCalendar>
+                    on Google Calendar
+                </StyledGoogleCalendar>
             </Book>
         </MainWrapper>
     )

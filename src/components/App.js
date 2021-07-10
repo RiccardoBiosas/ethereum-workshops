@@ -1,8 +1,8 @@
 import React from 'react'
+import { BrowserRouter, Redirect, Route } from 'react-router-dom'
 import { createGlobalStyle } from 'styled-components'
-import Header from './section/Header'
-import Main from './section/Main'
-import Syllabus from './section/Syllabus'
+import PageTracking from '../PageTracking'
+import Homepage from './Homepage'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -19,12 +19,12 @@ const GlobalStyle = createGlobalStyle`
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <GlobalStyle />
-      <Header />
-      <Main />
-      <Syllabus />
-    </>
+      <PageTracking />
+      <Route path='/' component={Homepage} />
+      <Redirect to='/' />
+    </BrowserRouter>
   );
 }
 

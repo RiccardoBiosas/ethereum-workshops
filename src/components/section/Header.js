@@ -5,6 +5,8 @@ import prgGreen from '../images/prgGreen.png'
 import sun from '../images/sun.png'
 import cloud from '../images/cloud.png'
 import {Button} from '../common'
+import GAAnalytics from '../../utils/analytics'
+import { actions, categories } from '../../constants/analytics'
 
 const HeaderWrapper = styled.header`
     background-color: #CAEAFF;
@@ -75,7 +77,13 @@ const Cloud = styled.div`
     }
 `
 
-export default function Header() { 
+export default function Header() {
+    
+    const handleClick = () => {
+        GAAnalytics.sendGAEvent(categories.HOMEPAGE, actions.CONTACT_US)
+        window.open('https://www.google.co.uk', '_blank')
+    }
+
     return ( 
         <HeaderWrapper>
             <Egg>
@@ -86,7 +94,11 @@ export default function Header() {
             </Cloud>
             <HeadingOne>Your Ethereum Workshop in Prague </HeadingOne>
             <Paragraph>Every week we take you on the journey to gain an understanding of Solidity & developing your first smart contract. From week 1 to week 2. </Paragraph>
-            <Center><Button>Contact Us</Button></Center> 
+            <Center>
+                <Button onClick={handleClick}>
+                    Contact Us
+                </Button>
+            </Center> 
             <PragueImgWrapper>
                 <PragueImg src={prgGreen} alt="Prague" />
             </PragueImgWrapper>
