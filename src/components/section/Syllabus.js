@@ -156,12 +156,12 @@ export default function Syllabus() {
                         <Paragraph>Intro to Smart Contracts/Use Cases</Paragraph>
                     </div>
                     <div>
-                        <Time>6:20 - 6:40</Time>
-                        <Paragraph>Ethereum’s Architectural Concepts</Paragraph>
+                        <Time>6:20 - 6:50</Time>
+                        <Paragraph>Basics of Ethereum’s architecture</Paragraph>
                     </div>
                     <div>
-                        <Time>6:40 - 7:00</Time>
-                        <Paragraph>History of Ethereum’s programming language</Paragraph>
+                        <Time>6:50 - 7:00</Time>
+                        <Paragraph>History of Ethereum’s programming languages - solidity, vyper and what's next</Paragraph>
                     </div>
                 </Column>
                 <Column>

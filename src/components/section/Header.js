@@ -81,7 +81,7 @@ export default function Header() {
     
     const handleClick = () => {
         GAAnalytics.sendGAEvent(categories.HOMEPAGE, actions.CONTACT_US)
-        window.open('https://www.google.co.uk', '_blank')
+        window.open('https://docs.google.com/forms/d/e/1FAIpQLSeTqXe3HY__vqOdiSgahImD6BORUoryxrwdg_8VVN1DbP0YPA/viewform?fbzx=6628130403232948967', '_blank')
     }
 
     return ( 

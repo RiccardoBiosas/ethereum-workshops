@@ -47,30 +47,27 @@ const Time = styled.div`
     text-underline-offset: 3px;
 `
 
-const Book = styled.div`
+const StyledBookWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    justify-content: center;
     
-    @media (min-width: 1280px) { 
+    @media (min-width: 1080px) { 
         flex-direction: row;
+        & > button {
+            margin-right: 1rem;
+        }
     }
 `
 const StyledGoogleCalendar = styled.div`
-    margin-top: 2.25rem;
     font-weight: bold;
     font-size: 25px;
     line-height: 39px;
+    margin-top: 2.25rem;
 
-    button {
-        background: transparent;
-        border: none;
-        font-size: 1.4rem;
-        color: blue;
-    }
-
-    @media (min-width: 1280px) { 
+    @media (min-width: 1080px) {
         margin-top: 0;
         font-size: 30px;
     }
@@ -84,7 +81,7 @@ const StyledGoogleCalendar = styled.div`
 export default function Main() {
     const handleClick = () => {
         GAAnalytics.sendGAEvent(categories.HOMEPAGE, actions.BOOK_LESSON)
-        window.open('https://www.google.co.uk', '_blank')
+        window.open('https://www.meetup.com/ethereum-prague', '_blank')
     }
     return (
         <MainWrapper>
@@ -92,12 +89,12 @@ export default function Main() {
             <HeadingThree>Every Monday</HeadingThree>
             <Address>Address: Nile House, Karolinská 654/2, Praha 8</Address>
             <Time>5:30 - 7pm</Time>
-            <Book>
+            <StyledBookWrapper>
                 <Button secondary onClick={handleClick}>Book</Button>
                 <StyledGoogleCalendar>
-                    on Google Calendar
+                    on meetup.com
                 </StyledGoogleCalendar>
-            </Book>
+            </StyledBookWrapper>
         </MainWrapper>
     )
 }
