@@ -73,11 +73,6 @@ const StyledGoogleCalendar = styled.div`
     }
 `
 
-/**
- * TODO:
- * should google calendar be a button or just plain text?
- */
-
 export default function Main() {
     const handleClick = () => {
         GAAnalytics.sendGAEvent(categories.HOMEPAGE, actions.BOOK_LESSON)
@@ -87,7 +82,7 @@ export default function Main() {
         <MainWrapper>
             <HeadingTwo>Introduction to Solidity </HeadingTwo>
             <HeadingThree>Every Monday</HeadingThree>
-            <Address>Address: Nile House, Karolinská 654/2, Praha 8</Address>
+            <Address>Address: Pracovna & Laskafe: Vlkova 36, 130 00 Praha 3-Žižkov</Address>
             <Time>5:30 - 7pm</Time>
             <StyledBookWrapper>
                 <Button secondary onClick={handleClick}>Book</Button>

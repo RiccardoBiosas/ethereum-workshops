@@ -17,17 +17,25 @@
     
     <meta property="og:title" content="Ethereum Workshops Prague">
     <meta property="og:description" content="Get started with Ethereum and blockchain development with a series of immersive workshops">
-    <meta property="og:image" content="%PUBLIC_URL%/twitterCard.jpg">
-    <meta property="og:url" content="%PUBLIC_URL%/twitterCard.jpg">
     <meta property="og:site_name" content="Ethereum Workshops Prague">
-
+    
     <meta name="twitter:card" content="summary_large_image">
+    <% if (process.env.REACT_APP_ENVIRONMENT === 'PRODUCTION') { %>
+      <!-- production -->
+      <meta property="og:image" content="https://ethereumprague.com/twitter_og.jpg">
+      <meta property="og:url" content="https://ethereumprague.com/twitter_og.jpg">
+      <meta property="twitter:image" content="https://ethereumprague.com/twitter_og.jpg" />
+      <% } %>
+      <% if (process.env.REACT_APP_ENVIRONMENT === 'DEVELOPMENT') { %>
+        <!-- development -->
+        <meta property="og:image" content="%PUBLIC_URL%/twitter_og.jpg">
+        <meta property="og:url" content="%PUBLIC_URL%/twitter_og.jpg">
+        <meta property="twitter:image" content="%PUBLIC_URL%/twitter_og.jpg" />
+      <% } %>	
     <meta name="twitter:site" content="@eth_praha" />
     <meta name="twitter:image:alt" content="Ethereum Workshops Prague">
     <meta name="twitter:creator" content="@RBiosas" />
 
-    <!-- <meta property="fb:app_id" content="your_app_id" />
-    <meta name="twitter:site" content="@website-username"> -->
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
